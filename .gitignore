@@ -1,0 +1,7 @@
+.idea/
+.gradle/
+logs/
+logs-docker/
+out/
+
+venv/

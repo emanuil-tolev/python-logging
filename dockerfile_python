@@ -1,0 +1,9 @@
+FROM python:3.6
+WORKDIR /usr/src/app
+
+COPY ./logme/requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY ./logme/logme.py ./
+
+CMD [ "python", "./logme.py" ]
