@@ -13,16 +13,15 @@ The [slides for this talk are available on Speaker Deck](https://speakerdeck.com
 
 ## Dependencies
 
-* **JDK 8+** and **Gradle** to run the Java code.
+* **Python 2 or 3** to run the Python code (but you don't need this if using the containerized app).
 * **Docker** (and Docker Compose) to run all the required components of the Elastic Stack (Filebeat, Logstash,
-Elasticsearch, and Kibana) and the containerized Java application.
+Elasticsearch, and Kibana) and the containerized Python application.
 
 
 ## Usage
 
-* Build the Java application: `$ gradle build`
 * Bring up the Elastic Stack: `$ docker-compose up --build`
-* Rerun the Java application if necessary: `$ docker restart <ID of the Java app>`
+* Rerun the Python logging example application if necessary: `$ docker restart <ID of the python app>`
 * Remove the Elastic Stack (and its volumes): `$ docker-compose down -v`
 
 
@@ -67,6 +66,6 @@ Elasticsearch, and Kibana) and the containerized Java application.
 
 1. Show the metadata we are collecting now.
 1. See why the `console` output works here, but we should turn off the colorization (otherwise the parsing breaks).
-1. Turn on the ingest pipeline and to show how everything is working, rebuild the Java app and restart Docker Compose.
+1. Turn on the ingest pipeline and to show how everything is working and restart Docker Compose.
 1. See why we needed the grok failure rule, because of the startup error from sending to Logstash directly.
 1. Filter to the right container name and point out the hinting that stops the multiline statements from being broken up.
